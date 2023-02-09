@@ -7,7 +7,7 @@
       "@babel/preset-react"
     ]
   },
-  "main": "dist/index.js",
+  "main": "dist/components/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -26,7 +26,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "publish:npm": "mkdir dist &&  babel src/components -d dist --copy-files"
+    "publish:npm:components": "babel src/components -d dist/components --copy-files",
+    "publish:npm:hooks": "babel src/hooks -d dist/hooks --copy-files",
+    "publish:npm:context": "babel src/context -d dist/context --copy-files"
   },
   "eslintConfig": {
     "extends": [
